@@ -36,14 +36,16 @@ theme_set(theme_minimal(base_size = 16))
   ##User Interface ----
 ########################.
 
-ui <- dashboardPage(title="Household projections of Scotland - National Records of Scotland", 
-               dashboardHeader(title = tags$a(href='http://www.nrscotland.gov.uk',
-               tags$img(height="45", alt="NRS", src="logo.png"),
-               tags$script(HTML('
-               $(document).ready(function() {
-               $("header").find("nav").append(\'<span class="myClass"> Household Projections for Scotland, 2016-based </span>\');
-               })
-               ')),
+ui <- dashboardPage(
+  
+  title="Household projections of Scotland - National Records of Scotland", 
+  dashboardHeader(title = tags$a(href='http://www.nrscotland.gov.uk',
+                                 tags$img(height="45", alt="NRS", src="logo.png"),
+                                 tags$script(HTML('
+                                 $(document).ready(function() {
+                                 $("header").find("nav").append(\'<span class="myClass"> Household Projections for Scotland, 2016-based </span>\');
+                                 })
+                                                  ')),
       tags$head(tags$style(HTML(
        '.myClass { 
        font-size: 17px;
@@ -72,6 +74,11 @@ ui <- dashboardPage(title="Household projections of Scotland - National Records 
  
  # 
  dashboardBody(
+   
+   HTML("<script src='https://cc.cdn.civiccomputing.com/8/cookieControl-8.x.min.js'></script>"),
+   HTML("<script async src='https://www.googletagmanager.com/gtag/js?id=UA-91956629-5'></script>"),
+   tags$script(src = "cookie_control_config.js"),
+   
    #adding css file
    tags$head(
    includeCSS("style.css")
