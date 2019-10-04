@@ -18,12 +18,12 @@ var config = {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'UA-91956629-5', { 'anonymize_ip':true });
+                gtag('config', 'UA-91956629-1', { 'anonymize_ip':true });
                 // End Google Analytics
             },
             onRevoke: function(){
                 // Disable Google Analytics
-                window['ga-disable-UA-91956629-5'] = true;
+                window['ga-disable-UA-91956629-1'] = true;
                 // End Google Analytics
             }
         }

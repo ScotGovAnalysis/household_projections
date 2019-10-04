@@ -76,7 +76,7 @@ ui <- dashboardPage(
  dashboardBody(
    
    HTML("<script src='https://cc.cdn.civiccomputing.com/8/cookieControl-8.x.min.js'></script>"),
-   HTML("<script async src='https://www.googletagmanager.com/gtag/js?id=UA-91956629-5'></script>"),
+   HTML("<script async src='https://www.googletagmanager.com/gtag/js?id=UA-91956629-1'></script>"),
    tags$script(src = "cookie_control_config.js"),
    
    #adding css file
